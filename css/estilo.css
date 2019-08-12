@@ -9,10 +9,30 @@ h1,h2,h3,h4{
     font-family: 'Roboto', regular !important;
 }
 
+
+.Pad_top{ padding-top:25px;
+
+}
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+
 .dlogin{
     width: max-content;
-    
+    top:7em;
+
 }
+
+.cards{
+    width: max-content;
+ }
 
 .avatar {
     position: absolute;
@@ -35,11 +55,11 @@ h1,h2,h3,h4{
 }
 
 nav a {
-    
+
     color: white !important;
     font-size: 1.4em !important;
     font-family: 'Roboto', regular !important;
-    
-    
+
+
 }
 

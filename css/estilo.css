@@ -1,0 +1,45 @@
+/*importação de fontes */
+@import url(https://fonts.googleapis.com/css?family=Asar|Roboto&display=swap);
+body{
+
+    font-family: 'Asar', regular !important;
+}
+h1,h2,h3,h4{
+
+    font-family: 'Roboto', regular !important;
+}
+
+.dlogin{
+    width: max-content;
+    
+}
+
+.avatar {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -70px;
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    z-index: 9;
+    background: #60c7c1;
+    padding: 15px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.cornav{
+    background-color: #2196f3;
+}
+
+nav a {
+    
+    color: white !important;
+    font-size: 1.4em !important;
+    font-family: 'Roboto', regular !important;
+    
+    
+}
+

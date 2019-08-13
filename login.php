@@ -1,60 +1,58 @@
+
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<html lang="pt-BR">
     <head>
-        <meta charset="UTF-8">
-        <title></title>
-        <!--CSS's-->
-        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
-        <!--JS's-->
-        <script src="js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="js/popper.min.js" type="text/javascript"></script>
-        <script src="js/slim.min.js" type="text/javascript"></script>
-        <script src="js/jquery.js" type="text/javascript"></script>
-        <script src="js/jquery.min.js" type="text/javascript"></script>
-        <script src="js/materialize.js" type="text/javascript"></script>
-        <script src="js/materialize.min.js" type="text/javascript"></script>
-        <script src="js/script.js" type="text/javascript"></script>
+        <meta charset="utf-8">
+        <title>Sistema de Gerenciamento de Hoteis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes"> 
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /><!-- Chamar o css do bootstrep -->
+        <link href="css/font-awesome.css" rel="stylesheet"><!-- chamar o css do font -->
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/><!-- Meu estilo propio -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
     </head>
     <body>
-        <div class="container" >
-            <center>
-                <div class="card dlogin" style="font-family: 'Asar', regular !important;" >
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <div class="avatar">
-                                <img src="img/avatar.png" width="65px" height="57px" alt="Avatar">
-                            </div>				
-                            <h4 class="modal-title" style="font-family: 'Asar', regular !important;">Login | Sistema de Hoteis</h4>	
-                        </div>
-                        <div class="modal-body">
-                            <form action="/examples/actions/confirmation.php" method="post">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="user" placeholder="Usuario" required="required">		
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" name="senha" placeholder="Senha" required="required">	
-                                </div>        
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-outline-success ">Login</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#">Esquecue a Senha?</a>
-                        </div>
-                    </div>
-                </div>
-            </center>
-        </div>
-        <?php
-        // put your code here
-        ?>
+        <div class="navbar navbar-fixed-top bg-dark">
+            <div class="navbar-inner">
+
+
+                <a href="login.php"> Sistema de Gerenciamento de Hoteis</a> 
+
+                <!-- /container -->
+            </div> <!-- /navbar-inner -->
+        </div> <!-- /navbar -->
+        <div class="container">
+            <div class="card clearfix text-center" style="padding: 2%;top:4em;">
+                <form id="formularioDeLogin">
+                    <h1>Acesso ao Sistema</h1>	
+                    <center>
+                        <div class="login-fields">
+                            <p>Por favor, preencha com seus dados de acesso.</p>
+                            <input type="hidden" id="acao" name="acao" value="entrar" placeholder="Usuário" />
+                            <input type="hidden" id="pagina" name="pagina" value="usuario" placeholder="Usuário" />
+                            <div class="field">
+
+                                <input type="text" id="cpf" name="cpf" value="" placeholder="Usuário" class="input-field" />
+                            </div> <!-- /field -->
+                            <div class="field">
+
+                                <input type="password" id="senha" name="senha" onsubmit="alert();" value="" placeholder="Senha" class="input-field"/>
+                            </div> <!-- /password -->
+                            <div id="erroLogin" style="visibility: hidden" class="alert-danger">
+                                <strong>Erro!</strong> Login ou senha inválido.
+                            </div>
+                        </div> <!-- /login-fields -->
+                    </center>
+                </form>
+                <div class="login-actions">
+                    <div class="login-extra">
+                    </div> <!-- /login-extra -->
+                    <button class=" btn btn-outline-success btn-large" >Entrar</button>
+                    <a href="#">Resetar senha</a>
+                </div> <!-- .actions -->
+            </div> <!-- /content -->
+        </div> <!-- /account-container -->
+        <script src="js/jquery-1.7.2.min.js"></script> <!-- chamar o Jquerry -->
+        <script src="js/bootstrap.js"></script> <!-- chamar o java do Bootstrep -->
     </body>
 </html>

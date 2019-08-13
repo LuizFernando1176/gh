@@ -1,4 +1,8 @@
+<?php
+include_once './util/conectaBD.php';
 
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -10,7 +14,9 @@
         <link href="css/font-awesome.css" rel="stylesheet"><!-- chamar o css do font -->
         <link href="css/estilo.css" rel="stylesheet" type="text/css"/><!-- Meu estilo propio -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+
     </head>
+
     <body>
         <div class="navbar navbar-fixed-top bg-dark">
             <div class="navbar-inner">
@@ -23,7 +29,7 @@
         </div> <!-- /navbar -->
         <div class="container">
             <div class="card clearfix text-center" style="padding: 2%;top:4em;">
-                <form id="formularioDeLogin">
+                <form id="formularioDeLogin" method="post" action="util/verificaLogin.php">
                     <h1>Acesso ao Sistema</h1>	
                     <center>
                         <div class="login-fields">
@@ -36,33 +42,31 @@
                             </div> <!-- /field -->
                             <div class="field">
 
-                                <div class="input-field col s12">
-                                    <select>
-                                        <option value="" disabled selected>Choose your option</option>
-                                        <option value="1">Option 1</option>
-                                        <option value="2">Option 2</option>
-                                        <option value="3">Option 3</option>
-                                    </select>
-                                    <label>Materialize Select</label>
-                                </div>
+
 
                                 <input type="password" id="senha" name="senha" onsubmit="alert();" value="" placeholder="Senha" class="input-field"/>
                             </div> <!-- /password -->
+
                             <div id="erroLogin" style="visibility: hidden" class="alert-danger">
+
                                 <strong>Erro!</strong> Login ou senha inválido.
                             </div>
-                        </div> <!-- /login-fields -->
-                    </center>
-                </form>
-                <div class="login-actions">
+                            <!-- /login-fields -->
+                             <div class="login-actions">
                     <div class="login-extra">
                     </div> <!-- /login-extra -->
-                    <button class=" btn btn-outline-success btn-large" >Entrar</button>
+                    <button type="submit" class=" btn btn-outline-success btn-large" >Entrar</button>
                     <a href="#">Resetar senha</a>
                 </div> <!-- .actions -->
+                    </center>
+                </form>
+               
             </div> <!-- /content -->
         </div> <!-- /account-container -->
         <script src="js/jquery-1.7.2.min.js"></script> <!-- chamar o Jquerry -->
         <script src="js/bootstrap.js"></script> <!-- chamar o java do Bootstrep -->
+        <script src="js/select.js" type="text/javascript"></script><!-- Selects alterados -->
+        <script src="js/script.js" type="text/javascript"></script><!-- meus scripts -->
+        <script src="js/materialize.min.js" type="text/javascript"></script><!--  scripts materialize -->
     </body>
 </html>

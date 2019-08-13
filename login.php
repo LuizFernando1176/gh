@@ -36,6 +36,16 @@
                             </div> <!-- /field -->
                             <div class="field">
 
+                                <div class="input-field col s12">
+                                    <select>
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                    <label>Materialize Select</label>
+                                </div>
+
                                 <input type="password" id="senha" name="senha" onsubmit="alert();" value="" placeholder="Senha" class="input-field"/>
                             </div> <!-- /password -->
                             <div id="erroLogin" style="visibility: hidden" class="alert-danger">
